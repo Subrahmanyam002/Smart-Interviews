@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Main. */
+    Scanner sc = new Scanner(System.in);
+    String s=sc.nextLine();
+    Stack<Character> stack=new Stack<>();
+    for(char ch:s.toCharArray()){
+        if(!stack.isEmpty()){
+            char top=stack.peek();
+            if((top=='A' && ch=='B')||(top=='C'&&ch=='D')){
+                stack.pop();
+                continue;
+            }
+        }
+        stack.push(ch);
+    }
+    System.out.println(stack.size());
+    sc.close();
+    }
+
+}
