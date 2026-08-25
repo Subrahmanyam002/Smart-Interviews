@@ -1,0 +1,23 @@
+
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Main. */
+    Scanner sc = new Scanner(System.in);
+    String s=sc.next();
+    boolean isDigit=true;
+    for(int i=0;i<s.length();i++){
+        if(!Character.isDigit(s.charAt(i))){
+            isDigit=false;
+            break;
+        }
+    }
+    if(isDigit){
+        System.out.println("Yes");
+    }else{
+        System.out.println("No");
+    }
+    }
+}
